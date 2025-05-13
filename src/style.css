@@ -818,3 +818,80 @@ button:hover {
   padding: 3px;
   border-radius: 5px;
 }
+
+@media (max-width: 768px) {
+  .ng-submission-container,
+  .show-ng-container,
+  .list-ng-container {
+    padding: 10px;
+  }
+
+  .top-navigation,
+  .top-navigation-show,
+  .top-navigation-list {
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 5px;
+  }
+
+  .top-button,
+  .top-button-show,
+  .top-button-list,
+  .home-button,
+  .show-button-show {
+    font-size: 14px;
+    padding: 6px 8px;
+    border-width: 2px;
+  }
+
+  .input-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .input-group select {
+    width: 100% !important;
+    margin-right: 0;
+  }
+
+  .ng-form {
+    padding: 10px;
+  }
+
+  .ng-card {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .ng-card h4 {
+    width: 100%;
+    font-size: 18px;
+    margin-left: 0;
+  }
+
+  .check-button-list {
+    width: 100%;
+  }
+
+  .filter-container-show,
+  .filter-alarm-show,
+  .filter-container-list {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .filter-container-show select,
+  .filter-alarm-show select,
+  .filter-container-list select,
+  .filter-container-show input,
+  .filter-container-list input {
+    width: 100%;
+  }
+
+  .photo-preview-content {
+    width: 95%;
+    height: auto;
+  }
+}
