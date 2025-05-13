@@ -1,0 +1,820 @@
+/* style.css */
+
+body {
+  font-family: Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.ng-submission-container {
+  background-color: #8B0000;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.top-navigation {
+  width: 100%;
+  background-color: white; /* Memberikan latar belakang putih pada bagian tombol */
+  text-align: center; /* Menyusun tombol di tengah */
+  padding: 10px 0; /* Memberikan ruang di sekitar tombol */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.top-button {
+  background-color: white; /* Warna latar belakang tombol */
+  color: #8B0000; /* Warna teks tombol */
+  padding: 10px 10px; /* Memberikan padding di sekitar tombol */
+  border: 4px solid #ccc; /* Outline abu-abu pada tombol */
+  border-radius: 20px; /* Membuat sudut tombol melengkung */
+  cursor: pointer; /* Menampilkan kursor pointer saat hover tombol */
+  text-align: center;
+  font-weight: bold;
+}
+
+.top-button:hover {
+  background-color: #ccc; /* Mengubah latar belakang tombol menjadi abu-abu muda saat hover */
+}
+
+.home-button {
+  background-color: #ccc; /* Warna latar belakang tombol */
+  color: #8B0000; /* Warna teks tombol */
+  border: 4px solid #ccc; /* Outline abu-abu pada tombol */
+  border-radius: 20px; /* Membuat sudut tombol melengkung */
+  cursor: pointer; /* Menampilkan kursor pointer saat hover tombol */
+  text-align: center;
+  font-weight: bold; /* Membuat teks "HOME" menjadi tebal */
+  font-size: 20px;
+  padding: 7px;
+}
+
+.home-button:hover {
+  background-color: #ccc;
+}
+
+.header {
+  text-align: center;  /* Menjadikan teks di tengah */
+  padding: 20px;
+  margin-top: 60px; /* Memberikan jarak bawah agar tidak tertutup tombol */
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 18px;
+  background-color: white; /* Kotak putih di belakang teks */
+  color: black; /* Warna font menjadi hitam */
+  display: inline-block; /* Agar kotak hanya sebesar teks */
+  padding: 10px; /* Memberikan ruang di sekitar teks */
+  border-radius: 14px; /* Membuat sudut kotak melengkung */
+  font-weight: bold;
+  margin: 0; /* Menghilangkan margin */
+}
+
+p {
+  font-size: 15px;
+}
+
+.ng-form {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #8B0000;
+  border-radius: 10px;
+}
+
+.input-row {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  flex: 1;
+}
+
+.input-group select {
+  height: 38px;
+  width: 453px;
+  margin-top: 5px;
+  margin-right: -40px;
+  border-radius: 5px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 102.5%;
+  padding: 10px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #b0b0b0;
+}
+
+.preview-container {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.photo-preview {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+
+
+
+
+.show-ng-container {
+  background-color: #ccc;
+  color: #000000;
+  padding: 20px;
+  margin-top: 0px;
+  min-height: 100vh;
+}
+
+.show-ng-container h1 {
+  margin-top: -25px;
+  margin-bottom: 0px;
+  font-weight: bold;
+}
+
+.ng-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 0px; /* Space to account for the fixed top navigation */
+  padding: 7px;
+}
+
+.ng-card {
+  background-color: #ffffff; /* Default putih */
+  color: rgb(0, 0, 0);
+  border: 2px solid #ffffff;
+  width: 400px;
+  padding: 15px;
+  border-radius: 30px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.762);
+  text-align: left;
+  height: 650px;
+  justify-content: space-between;
+  transition: background-color 0.5s ease; /* Efek transisi untuk perubahan warna */
+  overflow: hidden; /* Menyembunyikan overflow */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Warna untuk data yang belum diperiksa (unchecked) */
+.ng-card.unchecked {
+  background-color: #f44336; /* Merah */
+}
+
+/* Warna untuk data yang sudah diperiksa (checked) */
+.ng-card.checked {
+  background-color: #9e9e9e; /* Abu-abu */
+}
+
+.card-actions {
+  margin-top: 0px;
+  display: flex;
+  justify-content: center; /* Menyusun tombol di tengah */
+}
+
+.check-button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #4CAF50; /* Hijau untuk tombol check */
+  color: white;
+} 
+
+.check-button-list {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #4CAF50; /* Hijau untuk tombol check */
+  color: white;
+  width: 50%;
+  padding: 10px;
+} 
+
+
+
+
+
+.ng-card h4 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 0px;
+  text-align: center;
+  letter-spacing: 2px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 25px;
+  width: 340px;
+}
+
+.ng-card p {
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.ng-card .ng-text {
+  letter-spacing: 1px;
+  color: #000000;
+  font-weight: 100;
+  background-color: #ffffff;
+  font-size: medium;
+  word-wrap: break-word; /* Memaksa teks untuk membungkus */
+  overflow-wrap: break-word; /* Memastikan teks membungkus jika terlalu panjang */
+  white-space: normal; /* Membiarkan teks membungkus ke baris baru */
+  word-break: break-word; /* Memecah kata yang terlalu panjang */
+}
+
+.ng-text {
+  padding: 10px; /* Memberikan ruang di sekitar teks */
+  border-radius: 5px; /* Membuat sudut kotak melengkung */
+  padding-inline: 20px;
+}
+
+.ng-photo {
+  margin-top: 10px;
+  width: 100%;
+  height: 51%; /* Membuat gambar mengisi seluruh ruang ng-card */
+  object-fit: contain; /* Membuat gambar menutupi area dengan proporsional */
+  object-position: center; /* Menempatkan gambar di tengah */
+  border-radius: px; /* Opsional, untuk memberi sudut melengkung pada gambar */
+}
+
+.show-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 3px 0;
+}
+
+.show-group p {
+  margin: 0px;
+}
+
+.filter-container-show {
+  margin-bottom: 10px;
+  display: flex;
+  gap: 3px;
+  border: 0px solid #ffffff;
+  width: 305px;
+  padding: 10px;
+  background-color: #ffffffe3;
+  border-radius: 5px;
+  margin-top: -40px;
+}
+
+.filter-container-show label {
+  font-weight: bold;
+  margin-right: 10px;
+  margin-bottom: -10px;
+  font-size: 12px;
+}
+
+.filter-container-show select,
+.filter-container-show input {
+  padding: 3px;
+  margin-top: 10px;
+  border-radius: 5px;
+  width: 150px;
+  font-size: 12px;
+}
+
+.admin-show button {
+  width: 150px;
+  padding: 10px 20px; /* Menambahkan padding untuk ukuran tombol yang lebih kecil */
+  font-size: 14px; /* Mengurangi ukuran font agar tombol lebih kecil */
+  border-radius: 5px; /* Menambahkan sudut melengkung pada tombol */
+  background-color: #2a8b00; /* Warna latar belakang tombol */
+  color: white; /* Warna teks tombol */
+  border: none; /* Menghilangkan border default tombol */
+  cursor: pointer; /* Menampilkan kursor pointer saat hover tombol */
+  
+}
+
+.admin-show button:hover {
+  background-color: #1d9889; /* Mengubah warna tombol saat hover */
+}
+
+.admin-show {
+  text-align: right;
+  margin-bottom: -93px;
+  padding: 0px 0; /* Memberikan ruang vertikal di sekitar tombol */
+  margin-top: 55px;
+}
+
+
+.admin-list button {
+  width: 100px;
+  padding: 10px 20px; /* Menambahkan padding untuk ukuran tombol yang lebih kecil */
+  font-size: 14px; /* Mengurangi ukuran font agar tombol lebih kecil */
+  border-radius: 5px; /* Menambahkan sudut melengkung pada tombol */
+  background-color: #2a8b00; /* Warna latar belakang tombol */
+  color: white; /* Warna teks tombol */
+  border: none; /* Menghilangkan border default tombol */
+  cursor: pointer; /* Menampilkan kursor pointer saat hover tombol */
+  
+}
+
+.admin-list button:hover {
+  background-color: #1d9889; /* Mengubah warna tombol saat hover */
+}
+
+.admin-list {
+  text-align: right;
+  margin-bottom: -125px;
+  padding: 0px 0; /* Memberikan ruang vertikal di sekitar tombol */
+  margin-top: 55px;
+}
+
+
+
+.filter-alarm-show {
+  margin-bottom: 0px;
+  margin-top: -10px;
+  display: flex;
+  gap: 3px;
+  border: 0px solid #ffffff;
+  width: 465px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.filter-alarm-show label {
+  font-weight: bold;
+  margin-right: 10px;
+  margin-bottom: -10px;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.filter-alarm-show select {
+  padding: 3px;
+  margin-top: -3px;
+  border-radius: 5px;
+  width: 150px;
+  font-size: 12px;
+  background-color: #ffffff;
+}
+
+
+
+
+.login-container {
+  background-color: #979797;
+  color: rgb(255, 255, 255);
+  padding: 240px 20px;
+  min-height: 60vh;
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 50px;
+}
+
+.login-container input {
+  margin-bottom: 10px;
+  margin-left: 0px;
+  width: 200px;
+  text-align: center;
+}
+
+.login-container button {
+  margin-bottom: 10px;
+  margin-left: 0px;
+  width: 50px;
+}
+
+
+
+
+
+
+
+
+
+.list-ng-container{
+  padding: 20px;
+  background-color: #ccc;
+}
+
+.list-ng-container h1{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.export-container button {
+  width: 200px;
+  padding: 10px 20px; /* Menambahkan padding untuk ukuran tombol yang lebih kecil */
+  font-size: 14px; /* Mengurangi ukuran font agar tombol lebih kecil */
+  border-radius: 5px; /* Menambahkan sudut melengkung pada tombol */
+  background-color: #8B0000; /* Warna latar belakang tombol */
+  color: white; /* Warna teks tombol */
+  border: none; /* Menghilangkan border default tombol */
+  cursor: pointer; /* Menampilkan kursor pointer saat hover tombol */
+  
+}
+
+.export-container button:hover {
+  background-color: #d02828; /* Mengubah warna tombol saat hover */
+}
+
+.export-container {
+  text-align: right;
+  margin-bottom: 10px;
+  padding: 0px 0; /* Memberikan ruang vertikal di sekitar tombol */
+  margin-bottom: -10px;
+}
+
+.ng-table td img {
+  width: 70%; /* Mengubah ukuran foto menjadi 5% dari lebar kolom */
+  height: 50; /* Memastikan proporsi foto tetap terjaga */
+  object-fit: contain; /* Menjaga gambar agar tidak terdistorsi */
+}
+
+.ng-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  padding: 50px;
+  background-color: #ffffff;
+}
+
+.ng-table th, .ng-table td {
+  padding: 1px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.ng-table th {
+  background-color: #f2f2f2;
+}
+
+.ng-table td:nth-child(8) { /* Memilih kolom foto berdasarkan posisi (misalnya kolom ke-8) */
+  width: 7%; /* Mengatur lebar kolom foto menjadi 10% */
+}
+
+.ng-table td:nth-child(6) { /* Memilih kolom foto berdasarkan posisi (misalnya kolom ke-8) */
+  width: 5%; /* Mengatur lebar kolom foto menjadi 10% */
+}
+
+.ng-table td:nth-child(2) { /* Memilih kolom foto berdasarkan posisi (misalnya kolom ke-8) */
+  width: 4%; /* Mengatur lebar kolom foto menjadi 10% */
+}
+
+.export-container {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.filter-container-list {
+  margin-bottom: -50px;
+  display: flex;
+  gap: 3px;
+  border: 0px solid #ffffff;
+  width: 465px;
+  padding: 10px;
+  background-color: #ffffffe3;
+  border-radius: 5px;
+}
+
+.filter-container-list label {
+  font-weight: bold;
+  margin-right: 10px;
+  margin-bottom: -10px;
+  font-size: 12px;
+}
+
+.filter-container-list select,
+.filter-container-list input {
+  padding: 3px;
+  margin-top: 10px;
+  border-radius: 5px;
+  width: 150px;
+  font-size: 12px;
+}
+
+
+/* Style untuk container preview foto */
+.photo-preview-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.814); /* Latar belakang gelap */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Pastikan ini berada di atas elemen lain */
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; /* Efek fade in/out */
+}
+
+/* Saat foto preview muncul, opacity-nya 1 (terlihat) */
+.photo-preview-container.show {
+  opacity: 1;
+}
+
+/* Style untuk konten foto */
+.photo-preview-content {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  text-align: center;
+  overflow: hidden; /* Menjaga foto tetap berada dalam batas */
+}
+
+/* Style gambar foto yang besar */
+.photo-preview-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Membuat gambar menutupi area dengan proporsional */
+  object-position: center; /* Menempatkan gambar di tengah */
+  border-radius: 10px;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Animasi fade-in untuk gambar */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Gaya gambar di dalam tabel */
+.ng-photo-table {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+
+
+
+
+.top-navigation-show {
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.top-button-show {
+  background-color: white; /* Warna latar belakang tombol */
+  color: #8B0000; /* Warna teks tombol */
+  padding: 10px 10px; /* Memberikan padding di sekitar tombol */
+  border: 4px solid #ccc; /* Outline abu-abu pada tombol */
+  border-radius: 20px; /* Membuat sudut tombol melengkung */
+  cursor: pointer; /* Menampilkan kursor pointer saat hover tombol */
+  text-align: center;
+  font-weight: bold;
+}
+
+.show-button-show {
+  background-color: #ccc; /* Warna latar belakang tombol */
+  color: #8B0000; /* Warna teks tombol */
+  border: 4px solid #ccc; /* Outline abu-abu pada tombol */
+  border-radius: 20px; /* Membuat sudut tombol melengkung */
+  cursor: pointer; /* Menampilkan kursor pointer saat hover tombol */
+  text-align: center;
+  font-weight: bold; /* Membuat teks "HOME" menjadi tebal */
+  font-size: 19px;
+  padding: 7px 4px;
+}
+
+.top-button-show:hover {
+  background-color: #ccc;
+}
+
+.show-button-show:hover {
+  background-color: #ccc;
+}
+
+
+
+
+.top-navigation-list {
+  width: 110%;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  transform: translateX(-84px);
+}
+
+.top-button-list {
+  background-color: white; /* Warna latar belakang tombol */
+  color: #8B0000; /* Warna teks tombol */
+  padding: 10px 10px; /* Memberikan padding di sekitar tombol */
+  border: 4px solid #ccc; /* Outline abu-abu pada tombol */
+  border-radius: 20px; /* Membuat sudut tombol melengkung */
+  cursor: pointer; /* Menampilkan kursor pointer saat hover tombol */
+  text-align: center;
+  font-weight: bold;
+  padding-left: 11px;
+  padding-right: 11px;
+}
+
+.list-button-list {
+  background-color: #ccc; /* Warna latar belakang tombol */
+  color: #8B0000; /* Warna teks tombol */
+  border: 4px solid #ccc; /* Outline abu-abu pada tombol */
+  border-radius: 20px; /* Membuat sudut tombol melengkung */
+  cursor: pointer; /* Menampilkan kursor pointer saat hover tombol */
+  text-align: center;
+  font-weight: bold; /* Membuat teks "HOME" menjadi tebal */
+  font-size: 19px;
+  padding: 7px 4px;
+}
+
+.top-button-list:hover {
+  background-color: #ccc;
+}
+
+.list-button-list:hover {
+  background-color: #ccc;
+}
+
+
+
+
+
+
+.monitor-ng-container h1 {
+  margin-top: -70px;
+  margin-bottom: -15px;
+  font-weight: bold;
+  font-size: 30px
+}
+
+.monitor-button {
+  background-color: #ccc; /* Warna latar belakang tombol */
+  color: #8B0000; /* Warna teks tombol */
+  border: 4px solid #ccc; /* Outline abu-abu pada tombol */
+  border-radius: 20px; /* Membuat sudut tombol melengkung */
+  cursor: pointer; /* Menampilkan kursor pointer saat hover tombol */
+  text-align: center;
+  font-weight: bold; /* Membuat teks "HOME" menjadi tebal */
+  font-size: 19px;
+  padding: 7px 4px;
+}
+
+.monitor-ng-card  {
+  background-color: #ffffff; /* Default putih */
+  color: rgb(0, 0, 0);
+  border: 2px solid #ffffff;
+  width: 400px;
+  height: 370px;
+  padding: 15px;
+  border-radius: 40px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.762);
+  text-align: left;
+  justify-content: space-between;
+  transition: background-color 0.5s ease; /* Efek transisi untuk perubahan warna */
+  margin-top: -60px;
+  margin-bottom: 60px;
+}
+
+.monitor-ng-card h4 {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: -6px;
+  margin-top: -7px;
+  text-align: center;
+  letter-spacing: 2px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 25px;
+  width: 340px;
+}
+
+.monitor-ng-container p {
+  font-size: 10px;
+}
+
+.monitor-ng-container .ng-text {
+  font-size: 11px;
+  padding: 7px;
+  font-weight: bold;
+}
+
+.monitor-ng-container .show-row {
+  margin-bottom: -10px;
+  margin-top: 8px;
+  color: #000000;
+}
+
+
+
+
+
+.graph-button {
+  background-color: #ccc; /* Warna latar belakang tombol */
+  color: #a42121; /* Warna teks tombol */
+  border: 4px solid #ccc; /* Outline abu-abu pada tombol */
+  border-radius: 20px; /* Membuat sudut tombol melengkung */
+  cursor: pointer; /* Menampilkan kursor pointer saat hover tombol */
+  text-align: center;
+  font-weight: bold; /* Membuat teks "HOME" menjadi tebal */
+  font-size: 19px;
+  padding: 7px 4px;
+}
+
+.grafik-ng-container {
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.ng-charts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.ng-chart-container {
+  width: 32.2%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.grafik-ng-container h1 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: -30px;
+  margin-top: -30px;
+  background-color: #8B0000;
+  color: white;
+  padding: 3px;
+  border-radius: 5px;
+}
